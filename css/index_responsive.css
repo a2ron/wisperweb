@@ -1,0 +1,202 @@
+
+/**************************************************************************************/
+/* RESPONSIVE  */
+/**************************************************************************************/
+
+/**************************************************************************************/
+/* WIDTH  */
+/**************************************************************************************/
+@media (max-width: 900px) {
+    /* get down username and date */
+    .twitterusername
+    {
+        display:block;
+    }
+    .tweetdata{
+        height:40px;
+    }
+    .tweetcontent {
+        margin-top: 6px;
+    }
+}
+@media (max-width: 800px) {
+    /* get UP username and date */
+    .twitterusername
+    {
+        display: inline-block;
+    }
+    .tweetdata{
+        height: 24px;
+    }  
+    .tweetcontent
+    {
+        margin-top:6px;
+        padding-left: 10px;
+    }
+    /* hide contents */
+    #CONTENTS
+    {
+        display:none;
+    }
+    /* show button to show contents*/
+    #showTweetsButton
+    {
+        display:inline-block;
+    }
+    /* groups all screen */
+    #GROUPS{
+        width:100%;
+    }
+    /* groups imgs less size */
+    .groupuserimage {
+        width: 44px;
+        height: auto;
+        margin: 2px;
+    }
+    /* less padding body */
+    #body{
+        padding-top: 44px;
+    }
+
+}
+@media (max-width: 700px) {
+    /* adjust menu bar items*/
+    .menuButton{
+        margin:2px 2px;
+    }
+    .menuButton[type='image']
+    {
+        padding:2px;
+    }
+    #userSessionTitle
+    {
+        font-size: 16px;
+    }
+    #userScreenNameTitle
+    {
+        font-size: 12px;
+    }
+    .menuTitleCount{
+        font-size: 12px;
+    }
+    .menuCount{
+        font-size: 16px;
+        margin-top: -4px;
+    }
+}
+@media (max-width: 580px) {
+    /* get down username and date */
+    .twitterusername
+    {
+        display:block;
+    }
+    .tweetdata{
+        height:40px;
+    }
+    /* adjust menu bar items*/
+    #menu{
+        padding:0px 4px;
+    }
+    #userCounts{
+        display:none;
+    }
+    #userCounts:hover,#userData:hover{
+        cursor: pointer!important;/*for js toggle userCounts/userData*/
+    }
+}
+@media (max-width: 400px) {
+    /* adjust menu bar items*/
+    #menu{
+        padding:0px 2px;
+    }
+    .menuButton{
+        margin:2px 0px;
+    }
+    .menuButton[type='image']
+    {
+        padding:4px;
+    }
+    #userSessionTitle
+    {
+        font-size: 14px;
+    }
+    #userScreenNameTitle
+    {
+        font-size: 10px;
+    }
+    .menuTitleCount{
+        font-size: 10px;
+    }
+    .menuCount{
+        font-size: 14px;
+        margin-top: -4px;
+    }
+}
+
+
+/*******************************************************************************************************/
+/**************** bajar alto de contenedores tweets y groups para evitar scroll general ***************/
+/*******************************************************************************************************/
+#groupswrapper,#tweetswrapper
+{
+    overflow: auto;
+    height:91%;
+}
+@media (max-height: 600px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:90%;
+    }
+}@media (max-height: 550px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:89%;
+    }
+}
+@media (max-height: 500px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:87%;
+    }
+}@media (max-height: 450px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:86%;
+    }
+}
+@media (max-height: 400px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:85%;
+    }
+}
+@media (max-height: 360px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:84%;
+    }
+}
+@media (max-height: 330px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:80%;
+    }
+}
+@media (max-height: 300px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:77%;
+    }
+}
+@media (max-height: 250px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:75%;
+    }
+}
+@media (max-height: 220px) {
+    #groupswrapper,#tweetswrapper
+    {
+        height:71%;
+    }
+}

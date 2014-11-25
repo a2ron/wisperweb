@@ -1,0 +1,513 @@
+
+/*
+-------------------------
+    Colores Primarios
+-------------------------
+
+Azul Claro:     #55acee;
+Azul Celeste:   #c0deed;
+Azul Medio:     #0084b4;
+
+---------------------------
+    Colores Secundarios
+---------------------------
+
+Negro:          #000000;
+Negro Claro:    #292f33;
+Gris Oscuro:    #66757f;
+Gris Medio:     #8899a6;
+Gris Claro:     #ccd6dd;
+Blanco oscuro:  #e1e8ed;
+Blanco:         #ffffff;
+
+*/
+
+
+*{
+    word-wrap:break-word;
+}
+
+body
+{
+    background-color: #c0deed;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+
+h6{
+    margin:0px;
+    float:left;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited, a:link, a:active
+{
+    color:inherit;
+}
+
+.underline a:hover, a.linkHover, .tweetcontent a:hover, a.underline:hover{
+    color: #0084b4;
+    text-decoration: underline;
+}
+
+#userNameTitle
+{
+    position: absolute;
+    display:none;
+    color: #ffffff;
+    z-index:10;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    background:transparent;
+    border-radius: 3px;
+}
+
+.clickable:hover{
+    cursor: pointer!important;
+}
+.userSelecting
+{
+    box-shadow: #ffffff 0px 0px 25px 0px;
+}
+.userSelected
+{
+    box-shadow: #ffffff 0px 0px 25px 0px;
+}
+.tweetuserimage,.groupuserimage
+{
+    border-radius:3px;
+}
+#models{
+    display: none;
+}
+
+/**************************************************************************************/
+/* BOTON FOLLOW  */
+/**************************************************************************************/
+a.bFollow {
+    /*
+    background-image: -moz-linear-gradient(top, #ffffff, #dbdbdb);
+    background-image: -webkit-gradient(linear,left top,left bottom,
+        color-stop(0, #ffffff),color-stop(1, #dbdbdb));
+    filter: progid:DXImageTransform.Microsoft.gradient
+        (startColorStr='#ffffff', EndColorStr='#dbdbdb');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient
+        (startColorStr='#ffffff', EndColorStr='#dbdbdb')";
+    border: 1px solid #fff;
+    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    */
+    padding: 5px 4px;
+    text-decoration: none;
+    text-shadow: #fff 0 1px 0;
+    display: inline;
+    color: #000000;
+    line-height: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    float:right;
+    margin-right: 10px;
+}
+
+/*
+a.bFollow:hover {
+    background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+    background-image: -webkit-gradient(linear,left top,left bottom,
+        color-stop(0, #ffffff),color-stop(1, #eeeeee));
+    filter: progid:DXImageTransform.Microsoft.gradient
+        (startColorStr='#ffffff', EndColorStr='#eeeeee');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient
+        (startColorStr='#ffffff', EndColorStr='#eeeeee')";
+    color: #000;
+}
+
+a.bFollow:active {
+    background-image: -moz-linear-gradient(top, #dbdbdb, #ffffff);
+    background-image: -webkit-gradient(linear,left top,left bottom,
+        color-stop(0, #dbdbdb),color-stop(1, #ffffff));
+    filter: progid:DXImageTransform.Microsoft.gradient
+        (startColorStr='#dbdbdb', EndColorStr='#ffffff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient
+        (startColorStr='#dbdbdb', EndColorStr='#ffffff')";
+    text-shadow: 0px -1px 0 rgba(255, 255, 255, 0.5);
+    margin-top: 1px;
+}
+*/
+
+a.bFollow span{
+    padding-left: 16px;
+    background: url(/images/twitter_logo.png) no-repeat 0px 3px;
+    background-size: 12px 9px;
+}
+
+
+
+/**************************************************************************************/
+/* MENU  */
+/**************************************************************************************/
+#menu{
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    margin-bottom:10px;
+    position:fixed;
+    padding:0px 10px;
+    text-align: center;
+    color:#292f33;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    z-index: 100;
+}
+#body{
+    padding-top: 50px;
+}   
+.menuButton{
+    margin:2px 8px;
+    height: 36px;
+    display:inline-block;
+    vertical-align: middle;
+}
+.menuButtonIco:hover{
+    filter: alpha(opacity=50); /* internet explorer */
+    -khtml-opacity: 0.5;      /* khtml, version anterior de safari */
+    -moz-opacity: 0.5;       /* firefox, mozilla, netscape */
+    opacity: 0.5;           /* safari, chrome, opera */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /*internet explorer 8 - gracias Andres */
+}
+.myDisabled, .myDisabled:hover
+{
+    filter: alpha(opacity=10)!important; /* internet explorer */
+    -khtml-opacity: 0.1!important;      /* khtml, version anterior de safari */
+    -moz-opacity: 0.1!important;       /* firefox, mozilla, netscape */
+    opacity: 0.1!important;           /* safari, chrome, opera */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)"!important; /*internet explorer 8 - gracias Andres */
+    cursor: default!important;
+}
+#userSessionTitle
+{
+    text-align: right;
+    font-size: 18px;
+}
+#userScreenNameTitle
+{
+    text-align: right;
+    font-size: 12px;
+    margin-top: -2px;    
+    color: #8899a6;
+}
+#userSessionPhoto img{
+    width:36px;
+    border-radius: 3px;
+}
+#userCounts,#userData
+{
+    display:inline-block;
+}
+.titleHover, .count:hover{
+    color: #0084b4;
+}
+.menuTitleCount{
+    text-align: center;
+    font-size: 12px;
+}
+
+.menuCount{
+    text-align: center;
+    font-size: 18px;
+    margin-top: -4px;
+    color: #0084b4;
+
+}
+#menuLeft
+{
+    float:left;
+}
+#menuRight
+{
+    float:right;
+}
+#showTweetsButton
+{
+    display:none;
+}
+
+/**************************************************************************************/
+/* GROUPS  */
+/**************************************************************************************/
+
+.groupwrapper {
+    margin-bottom: 6px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.groupSelected {
+    box-shadow: #ffffff 0px 0px 25px 0px inset!important;
+}
+.groupSelecting {
+    box-shadow: #ffffff 0px 0px 25px 0px inset!important;
+}
+
+.groupuserimage {
+    width: 54px;
+    height: auto;
+    margin: 3px;
+}
+.groupactions
+{ 
+    text-align: right;
+}
+
+/**************************************************************************************/
+/* CONTENTS */
+/**************************************************************************************/
+.tweetwrapper {
+    margin-bottom: 4px;
+    padding: 6px;
+    border-radius: 3px;
+    border-bottom: 1px solid #e1e8ed;
+    background-color: #ffffff;
+    color: #292f33;
+    text-align: left;
+}
+.tweetuserimage {
+    height: 100%;
+    float: left;
+}
+.tweetdata {
+    height: 24px;
+    margin-top: 0px;
+    margin-left: 40px;
+    padding-left: 0px;
+    border-bottom: 1px solid #e1e8ed;
+}
+.tweetcab {
+    height: 36px;
+}
+.tweetdataitem {
+    display: inline-block;
+    margin-right: 6px;
+    color: #8899a6;
+}
+.tweetdataitem.tweetscreenname{
+    font-style: normal;
+    font-weight: 400;
+}
+.tweetdataitem.twitterusername{
+    color: #292f33;
+    font-size: 15px;
+    font-weight: 700;
+}
+.twittername {
+    display: inline-block;
+    height: 100%;
+}
+.tweetdateinterface {
+    display: inline-block;
+    height: 100%;
+    min-width: 0px;
+}
+.tweetcontent {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    padding-left: 44px;
+}
+.tweettext {
+    color: #1abc9c;
+}
+
+/* TWEET LINKS */
+.tweetcontent a
+{
+    color: #0084b4;
+}
+
+
+/* TWEET IMAGES */
+.tweetImage
+{
+    width:100%;
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+}
+.tweetImage img{
+    height:400px;
+    margin-top: -100px;
+    border-radius:3px;
+}
+
+/* TWEET ACTIONS */
+.tweetactions a{
+    font-size:12px;
+    color: #8899a6;
+}
+.tweetactions a:hover{
+    color: rgb(102,102,102);
+}
+.tweetActionDone
+{
+    color:rgb(87,195,29)!important;
+}
+.tweetActionDone:hover
+{
+    color:rgb(87,195,29);
+}
+.tweetactions {
+    height:32px;
+    padding-left: 20px;    
+    width:270px;
+    display: inline-block;
+}
+
+.tweetactionbutton {
+    margin-right: 6px; 
+}
+.tweetactionbutton img{
+    width:16px;
+    margin-top:-2px;
+}
+/* MENTIONS */
+.viewMentionateds
+{
+    float:right;
+}
+.tweetmentions
+{
+    /*display:none;*/
+    float:right;
+    height:32px;
+}
+.tweetmentions .tweetuserimage
+{
+    margin-left:4px;
+    display:block;
+}
+.following{
+}
+.unfollowing{
+    -webkit-box-shadow: 0px 5px 10px 0px #0084b4;
+    -moz-box-shadow: 0px 5px 10px 0px #0084b4;
+    box-shadow: 0px 5px 10px 0px #0084b4;
+
+    filter: alpha(opacity=50); /* internet explorer */
+    -khtml-opacity: 0.5;      /* khtml, version anterior de safari */
+    -moz-opacity: 0.5;       /* firefox, mozilla, netscape */
+    opacity: 0.5;           /* safari, chrome, opera */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /*internet explorer 8 - gracias Andres */
+}
+/* REPLY */
+.replyText
+{ 
+    min-width: 95%;
+    max-width: 95%;
+    width: 100%;   
+    border-radius: 3px;   
+    height: 50px;
+    max-height: 50px;
+    min-height: 30px;
+    margin:5px;
+    padding: 3px;
+}
+
+.disabled{
+    background-color: #efefef;
+}
+
+/* tweet iframe */
+.tweetwrapperFrame{
+    margin:0px;
+    padding:0px;
+    border:none;
+    background-color: transparent;  
+}
+.tweetwrapper iframe {
+    width: 100%!important;
+}
+/**************************************************************************************/
+/* BUTTONS */
+/**************************************************************************************/
+
+.btn {
+    height:32px;
+    background: #ffffff;
+    background-image: -webkit-linear-gradient(top, #ffffff, #e1e8ed);
+    background-image: -moz-linear-gradient(top, #ffffff, #e1e8ed);
+    background-image: -ms-linear-gradient(top, #ffffff, #e1e8ed);
+    background-image: -o-linear-gradient(top, #ffffff, #e1e8ed);
+    background-image: linear-gradient(to bottom, #ffffff, #e1e8ed);
+    -webkit-border-radius: 3;
+    -moz-border-radius: 3;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 2px 3px 2px 3px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #ffffff;
+    text-decoration: none;
+}
+
+/**************************************************************************************/
+/* PROGRESS BAR */
+/**************************************************************************************/
+
+#progressbar
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:100;
+    height: 7px;
+    width:100%;
+    margin-top:40px;
+    border:none;
+    border-radius: 1px;
+    background:transparent;
+}
+#progressbar div
+{
+    background:none;
+    background-color: rgb(47,128,179);
+    height: 7px;
+    border:none;
+    border-radius: 1px;
+}
+
+/**************************************************************************************/
+/* LOADING */
+/**************************************************************************************/
+
+#loading{ 
+    position:fixed;
+    margin:auto;
+    padding-top:100px;
+    width:100%;
+    z-index: 50;
+    background-color: white;
+    height: 100%;
+    filter: alpha(opacity=80); /* internet explorer */
+    -khtml-opacity: 0.8;      /* khtml, version anterior de safari */
+    -moz-opacity: 0.8;       /* firefox, mozilla, netscape */
+    opacity: 0.8;           /* safari, chrome, opera */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /*internet explorer 8 - gracias Andres */
+}
+
+/**************************************************************************************/
+/* LOADING */
+/**************************************************************************************/
+
+.error
+{
+    font-size: 18px;
+    position:fixed;
+    z-index: 75;
+    top:100px;
+    width: 100%;
+    font-weight: bold;
+}
