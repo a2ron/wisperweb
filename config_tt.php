@@ -7,4 +7,4 @@
 
 define('CONSUMER_KEY', '*************');
 define('CONSUMER_SECRET', '***************************************');
-define('OAUTH_CALLBACK', 'http://wisper.es/callback.php');
+define('OAUTH_CALLBACK', 'http://www.wisper.es/callback.php');
